@@ -1,0 +1,140 @@
+Lenovo@Ritik MINGW64 ~/Assignments (master)
+$ git checkout -b js-assignments
+Switched to a new branch 'js-assignments'
+
+Lenovo@Ritik MINGW64 ~/Assignments (js-assignments)
+$ git status
+On branch js-assignments
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        app.js
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Lenovo@Ritik MINGW64 ~/Assignments (js-assignments)
+$ git add .
+
+Lenovo@Ritik MINGW64 ~/Assignments (js-assignments)
+$ git status
+On branch js-assignments
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   app.js
+
+
+Lenovo@Ritik MINGW64 ~/Assignments (js-assignments)
+$ vi README.txt
+
+Lenovo@Ritik MINGW64 ~/Assignments (js-assignments)
+$ git status
+On branch js-assignments
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   app.js
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+
+
+Lenovo@Ritik MINGW64 ~/Assignments (js-assignments)
+$ git add .
+
+Lenovo@Ritik MINGW64 ~/Assignments (js-assignments)
+$ git status
+On branch js-assignments
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.txt
+        new file:   app.js
+
+
+Lenovo@Ritik MINGW64 ~/Assignments (js-assignments)
+$ git commit -m "js readme"
+[js-assignments 0b0e13b] js readme
+ 2 files changed, 79 insertions(+)
+ create mode 100644 app.js
+
+Lenovo@Ritik MINGW64 ~/Assignments (js-assignments)
+$ git checkout master
+Switched to branch 'master'
+
+Lenovo@Ritik MINGW64 ~/Assignments (master)
+$ vi README.txt
+
+Lenovo@Ritik MINGW64 ~/Assignments (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lenovo@Ritik MINGW64 ~/Assignments (master)
+$ git add .
+
+Lenovo@Ritik MINGW64 ~/Assignments (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.txt
+
+
+Lenovo@Ritik MINGW64 ~/Assignments (master)
+$ git commit -m "updated js readme"
+[master c6a41df] updated js readme
+ 1 file changed, 1 insertion(+)
+
+Lenovo@Ritik MINGW64 ~/Assignments (master)
+$ git checkout js-assignments
+Switched to branch 'js-assignments'
+
+Lenovo@Ritik MINGW64 ~/Assignments (js-assignments)
+$ git status
+On branch js-assignments
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   app.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lenovo@Ritik MINGW64 ~/Assignments (js-assignments)
+$ git add .
+
+Lenovo@Ritik MINGW64 ~/Assignments (js-assignments)
+$ git status
+On branch js-assignments
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   app.js
+
+
+Lenovo@Ritik MINGW64 ~/Assignments (js-assignments)
+$ git commit -m "updated app.js"
+[js-assignments 2afe78e] updated app.js
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Lenovo@Ritik MINGW64 ~/Assignments (js-assignments)
+$ git checkout master
+Switched to branch 'master'
+
+Lenovo@Ritik MINGW64 ~/Assignments (master)
+$ git merge js-assignments
+Auto-merging README.txt
+Merge made by the 'ort' strategy.
+ README.txt |  1 +
+ app.js     | 78 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 79 insertions(+)
+ create mode 100644 app.js
+
+Lenovo@Ritik MINGW64 ~/Assignments (master)
+$ git branch -d js-assignments
+Deleted branch js-assignments (was 2afe78e).
+
+Lenovo@Ritik MINGW64 ~/Assignments (master)
+$

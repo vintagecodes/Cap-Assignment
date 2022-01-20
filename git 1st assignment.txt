@@ -1,0 +1,193 @@
+Lenovo@Ritik MINGW64 ~
+$ cd project_dir
+
+Lenovo@Ritik MINGW64 ~/project_dir (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/Lenovo/project_dir/.git/
+
+Lenovo@Ritik MINGW64 ~/project_dir (master)
+$ touch index.html
+
+Lenovo@Ritik MINGW64 ~/project_dir (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Lenovo@Ritik MINGW64 ~/project_dir (master)
+$ git add index.html
+
+Lenovo@Ritik MINGW64 ~/project_dir (master)
+$ git commit index.html
+[master (root-commit) 39303c5] create index html
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+
+Lenovo@Ritik MINGW64 ~/project_dir (master)
+$ vi index.html
+
+Lenovo@Ritik MINGW64 ~/project_dir (master)
+$ touch info.txt
+
+Lenovo@Ritik MINGW64 ~/project_dir (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        info.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lenovo@Ritik MINGW64 ~/project_dir (master)
+$ touch .gitignore
+
+Lenovo@Ritik MINGW64 ~/project_dir (master)
+$ vi .gitignore
+
+Lenovo@Ritik MINGW64 ~/project_dir (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lenovo@Ritik MINGW64 ~/project_dir (master)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+Lenovo@Ritik MINGW64 ~/project_dir (master)
+$ git add .
+warning: LF will be replaced by CRLF in index.html.
+The file will have its original line endings in your working directory
+
+Lenovo@Ritik MINGW64 ~/project_dir (master)
+$ git commit -m "ignored the txt file and commited the index html"
+[master 07ca0ba] ignored the txt file and commited the index html
+ 1 file changed, 9 insertions(+)
+
+Lenovo@Ritik MINGW64 ~/project_dir (master)
+$ vi index.html
+
+Lenovo@Ritik MINGW64 ~/project_dir (master)
+$ git log
+commit 07ca0baa100e6526698490d0a41f3d1951488cac (HEAD -> master)
+Author: vintagecodes <rraj02668@gmail.com>
+Date:   Wed Jan 19 23:36:49 2022 +0530
+
+    ignored the txt file and commited the index html
+
+commit 39303c5bd10f95bc8d9d13c092a8d33033dba0e3
+Author: vintagecodes <rraj02668@gmail.com>
+Date:   Wed Jan 19 23:26:40 2022 +0530
+
+    create index html
+
+Lenovo@Ritik MINGW64 ~/project_dir (master)
+$ git revert 39303c5bd10f95bc8d9d13c092a8d33033dba0e3
+CONFLICT (modify/delete): index.html deleted in (empty tree) and modified in HEAD.  Version HEAD of index.html left in tree.
+error: could not revert 39303c5... create index html
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git revert --continue".
+hint: You can instead skip this commit with "git revert --skip".
+hint: To abort and get back to the state before "git revert",
+hint: run "git revert --abort".
+
+Lenovo@Ritik MINGW64 ~/project_dir (master|REVERTING)
+$ git revert 39303c5bd10f95bc8d9d13c092a8d33033dba0e3 index.html
+fatal: bad revision 'index.html'
+
+Lenovo@Ritik MINGW64 ~/project_dir (master|REVERTING)
+$ git checkout 39303c5bd10f95bc8d9d13c092a8d33033dba0e3 index.html
+Updated 1 path from 0a5568b
+
+Lenovo@Ritik MINGW64 ~/project_dir (master|REVERTING)
+$ vi index.html
+
+Lenovo@Ritik MINGW64 ~/project_dir (master|REVERTING)
+$ git add .
+warning: LF will be replaced by CRLF in index.html.
+The file will have its original line endings in your working directory
+
+Lenovo@Ritik MINGW64 ~/project_dir (master|REVERTING)
+$ git log
+commit 07ca0baa100e6526698490d0a41f3d1951488cac (HEAD -> master)
+Author: vintagecodes <rraj02668@gmail.com>
+Date:   Wed Jan 19 23:36:49 2022 +0530
+
+    ignored the txt file and commited the index html
+
+commit 39303c5bd10f95bc8d9d13c092a8d33033dba0e3
+Author: vintagecodes <rraj02668@gmail.com>
+Date:   Wed Jan 19 23:26:40 2022 +0530
+
+    create index html
+
+Lenovo@Ritik MINGW64 ~/project_dir (master|REVERTING)
+$ git help COMMAND
+fatal: 'C:/Program Files/Git/mingw64/share/doc/git-doc/gitCOMMAND.html': documentation file not found.
+
+Lenovo@Ritik MINGW64 ~/project_dir (master|REVERTING)
+$ man git -COMMAND
+bash: man: command not found
+
+Lenovo@Ritik MINGW64 ~/project_dir (master|REVERTING)
+$ git restore --staged index.html
+
+Lenovo@Ritik MINGW64 ~/project_dir (master|REVERTING)
+$ git config --global alias.my-add add
+
+Lenovo@Ritik MINGW64 ~/project_dir (master|REVERTING)
+$ git my-add .
+warning: LF will be replaced by CRLF in index.html.
+The file will have its original line endings in your working directory
+
+Lenovo@Ritik MINGW64 ~/project_dir (master|REVERTING)
+$ git commit -m "changed the add command to my add and commited index html"
+[master 24d68be] changed the add command to my add and commited index html
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+Lenovo@Ritik MINGW64 ~/project_dir (master)
+$ git log
+commit 24d68bec7b59870ab02f775f1ba730331ca45266 (HEAD -> master)
+Author: vintagecodes <rraj02668@gmail.com>
+Date:   Thu Jan 20 00:05:07 2022 +0530
+
+    changed the add command to my add and commited index html
+
+commit 07ca0baa100e6526698490d0a41f3d1951488cac
+Author: vintagecodes <rraj02668@gmail.com>
+Date:   Wed Jan 19 23:36:49 2022 +0530
+
+    ignored the txt file and commited the index html
+
+commit 39303c5bd10f95bc8d9d13c092a8d33033dba0e3
+Author: vintagecodes <rraj02668@gmail.com>
+Date:   Wed Jan 19 23:26:40 2022 +0530
+
+    create index html
+
+Lenovo@Ritik MINGW64 ~/project_dir (master)
+$ git revert 24d68bec7b59870ab02f775f1ba730331ca45266
+[master 67a54c1] Revert "changed the add command to my add and commited index html"
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+Lenovo@Ritik MINGW64 ~/project_dir (master)
+$

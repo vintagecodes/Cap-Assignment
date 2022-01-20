@@ -1,0 +1,245 @@
+
+Lenovo@Ritik MINGW64 ~
+$ mkdir Assignments
+
+Lenovo@Ritik MINGW64 ~
+$ cd Assignments
+
+Lenovo@Ritik MINGW64 ~/Assignments
+$ vi README.txt
+
+Lenovo@Ritik MINGW64 ~/Assignments
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+Lenovo@Ritik MINGW64 ~/Assignments
+$ git add .
+fatal: not a git repository (or any of the parent directories): .git
+
+Lenovo@Ritik MINGW64 ~/Assignments
+$ git add .
+fatal: not a git repository (or any of the parent directories): .git
+
+Lenovo@Ritik MINGW64 ~/Assignments
+$ ^C
+
+Lenovo@Ritik MINGW64 ~/Assignments
+$ git init
+Initialized empty Git repository in C:/Users/Lenovo/Assignments/.git/
+
+Lenovo@Ritik MINGW64 ~/Assignments (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Lenovo@Ritik MINGW64 ~/Assignments (master)
+$ git add .
+warning: LF will be replaced by CRLF in README.txt.
+The file will have its original line endings in your working directory
+
+Lenovo@Ritik MINGW64 ~/Assignments (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.txt
+
+
+Lenovo@Ritik MINGW64 ~/Assignments (master)
+$ git commit -m "readfile"
+[master (root-commit) 9636cd2] readfile
+ 1 file changed, 9 insertions(+)
+ create mode 100644 README.txt
+
+Lenovo@Ritik MINGW64 ~/Assignments (master)
+$ git checkout -b html-assignments
+Switched to a new branch 'html-assignments'
+
+Lenovo@Ritik MINGW64 ~/Assignments (html-assignments)
+$ git status
+On branch html-assignments
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        blob.jpg
+        index.html
+        script.js
+        style.css
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Lenovo@Ritik MINGW64 ~/Assignments (html-assignments)
+$ git add .
+
+Lenovo@Ritik MINGW64 ~/Assignments (html-assignments)
+$ git status
+On branch html-assignments
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   blob.jpg
+        new file:   index.html
+        new file:   script.js
+        new file:   style.css
+
+
+Lenovo@Ritik MINGW64 ~/Assignments (html-assignments)
+$ git commit -m "added html project"
+[html-assignments c5af7aa] added html project
+ 4 files changed, 95 insertions(+)
+ create mode 100644 blob.jpg
+ create mode 100644 index.html
+ create mode 100644 script.js
+ create mode 100644 style.css
+
+Lenovo@Ritik MINGW64 ~/Assignments (html-assignments)
+$ git status
+On branch html-assignments
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lenovo@Ritik MINGW64 ~/Assignments (html-assignments)
+$ git add .
+
+Lenovo@Ritik MINGW64 ~/Assignments (html-assignments)
+$ git status
+On branch html-assignments
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+
+
+Lenovo@Ritik MINGW64 ~/Assignments (html-assignments)
+$ git commit -m "minor changes in index.html"
+[html-assignments 5fdf03c] minor changes in index.html
+ 1 file changed, 1 insertion(+)
+
+Lenovo@Ritik MINGW64 ~/Assignments (html-assignments)
+$ git checkout master
+Switched to branch 'master'
+
+Lenovo@Ritik MINGW64 ~/Assignments (master)
+$ vi README.txt
+
+Lenovo@Ritik MINGW64 ~/Assignments (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lenovo@Ritik MINGW64 ~/Assignments (master)
+$ git add .
+warning: LF will be replaced by CRLF in README.txt.
+The file will have its original line endings in your working directory
+
+Lenovo@Ritik MINGW64 ~/Assignments (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.txt
+
+
+Lenovo@Ritik MINGW64 ~/Assignments (master)
+$ git commit -m "updated the readme file"
+[master 0a075db] updated the readme file
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Lenovo@Ritik MINGW64 ~/Assignments (master)
+$ git checkout html-assignments
+Switched to branch 'html-assignments'
+
+Lenovo@Ritik MINGW64 ~/Assignments (html-assignments)
+$ git status
+On branch html-assignments
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lenovo@Ritik MINGW64 ~/Assignments (html-assignments)
+$ git add .
+
+Lenovo@Ritik MINGW64 ~/Assignments (html-assignments)
+$ git status
+On branch html-assignments
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+
+
+Lenovo@Ritik MINGW64 ~/Assignments (html-assignments)
+$ git commit -m "updated index.html"
+[html-assignments 3ec8891] updated index.html
+ 1 file changed, 2 insertions(+)
+
+Lenovo@Ritik MINGW64 ~/Assignments (html-assignments)
+$ git checkout master
+Switched to branch 'master'
+
+Lenovo@Ritik MINGW64 ~/Assignments (master)
+$ vi README.txt
+
+Lenovo@Ritik MINGW64 ~/Assignments (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lenovo@Ritik MINGW64 ~/Assignments (master)
+$ git add .
+
+Lenovo@Ritik MINGW64 ~/Assignments (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.txt
+
+
+Lenovo@Ritik MINGW64 ~/Assignments (master)
+$ git commit -m "updated readme"
+[master bc514f2] updated readme
+ 1 file changed, 1 insertion(+)
+
+Lenovo@Ritik MINGW64 ~/Assignments (master)
+$ git merge html-assignments
+Merge made by the 'ort' strategy.
+ blob.jpg   | Bin 0 -> 57464 bytes
+ index.html |  71 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ script.js  |   0
+ style.css  |  27 +++++++++++++++++++++++
+ 4 files changed, 98 insertions(+)
+ create mode 100644 blob.jpg
+ create mode 100644 index.html
+ create mode 100644 script.js
+ create mode 100644 style.css
+
+Lenovo@Ritik MINGW64 ~/Assignments (master)
+$ git branch -d html-assignments
+Deleted branch html-assignments (was 3ec8891).
+
+Lenovo@Ritik MINGW64 ~/Assignments (master)
+$
