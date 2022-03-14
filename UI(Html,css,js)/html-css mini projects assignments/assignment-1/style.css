@@ -1,0 +1,115 @@
+body{
+    background: black;
+}
+
+
+#name{
+    margin-top: -5px;
+    font-size: 80px;
+    text-align: center;
+    color: white;
+}
+
+.cont1 {
+    height: 20%;
+    width: 100%;
+    overflow: hidden;
+    top: 0;
+    background-color: black;
+    position: fixed;
+}
+
+#irffan{
+    margin-top: 140px;
+    width: 100%;
+    height: 50%;
+}
+
+blockquote{
+    margin-top: -35px;
+    color: wheat;
+    text-align: center;
+}
+
+.date{
+    text-align: center;
+    color: white;
+}
+
+#him{
+    text-align: center;
+    color: white;
+}
+
+.card{
+    background: black;
+    padding: 200px;
+    margin-top: 80px;
+    margin-left: 25%;
+    width: 50%;
+    height: 80%;
+    box-sizing: border-box;
+    box-shadow: 0px 10px 8px 8px orange;
+}
+
+.list{
+    margin-top: -135px;
+    margin-left: -195px;
+    font-size: 25px;
+    list-style-type:circle;
+}
+
+li{
+    color: white;
+    margin: 0 0 20px 0;
+}
+
+@media screen and (max-width: 800px) {
+
+    body{
+        background: white;
+    }
+
+    .cont1{
+        background: white;
+       position: relative;
+    }
+    
+    #name{
+        color: black;
+        margin-left: 160px;
+    }
+    blockquote{
+        margin-top: -55px;
+        margin-left: 200px;
+    }
+
+    .date{
+        text-align: center;
+        margin-top: 50px;
+        color: black;
+    }
+
+    #irffan{
+        transform: translateY(-10%);
+    }
+
+    #him{
+        color: black;
+    }
+
+    .card{
+        width: 100%;
+        height: 50%;
+        margin-left: 5px;
+        background: lightgrey;
+        border: 1px solid grey;
+        box-shadow: 0px 10px 8px 8px black;
+    }
+
+    .list{
+        margin-top: -160px;
+        margin-left: -205px;
+        font-size: 15px;
+    }
+}

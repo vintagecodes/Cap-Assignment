@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <h1>m&nbsp;<span>O</span><span>O</span> &nbsp; dy 
+            <div id="sur" style="color: brown;">surveys</div></h1>
+    </nav>
+    <main>
+
+        <div class="container">
+            <p onclick="openForm()">Happy</p>
+            </div>
+            <div class="form-popup" id="myForm">
+                <form action="" class="form-container">
+                  <h1>Survey</h1>
+              
+                  <label for="email"><b>Email</b></label>
+                  <input type="text" placeholder="Enter Email" name="email" required>
+              
+                  <label for="psw"><b>How was your day?</b></label>
+                  <input type="text" placeholder="Say about your day spent" name="psw" required>
+
+                  <label for="psw1"><b>Reason for your Happy Face?</b></label>
+                  <input type="text" placeholder="Say reasons for being happy" name="happy" required>
+
+                  <label for="confidence"><b>Rate yourself on your today's confidence towards life</b></label>
+                  <input type="text" placeholder="Say about your confidence today" name="confidence" required>
+
+                  <label for="places"><b>Name some of the best places you hace visited today</b></label>
+                  <input type="text" placeholder="Name the places where you went today" name="places" required>
+              
+                  <button type="submit" class="btn">Submit</button>
+                  <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                </form>
+              </div>
+
+              <div class="container1">
+                <p class="sad" value="sad" onclick="openForms()">Sad</p>
+                </div>
+                <div class="form-popup1" id="myForm1">
+                    <form action="" class="form-container">
+                      <h1>Surveys</h1>
+                  
+                      <label for="email"><b>Email</b></label>
+                      <input type="text" placeholder="Enter Email" name="email" required>
+                  
+                      <label for="psw"><b>How was your day?</b></label>
+                      <input type="text" placeholder="Say about your day spent" name="psw" required>
+                  
+                      <button type="submit" class="btn">Submit</button>
+                      <button type="button" class="btn cancel" onclick="closeForms()">Close</button>
+                    </form>
+                  </div>
+    </main>
+
+    <script>
+        var val = document.getElementsByClassName(".container1").querySelector(".sad");
+        console.log(val[0]);
+
+        function openForm() {
+          document.getElementById("myForm").style.display = "block";
+        }
+
+        function openForms() {
+          document.getElementById("myForm1").style.display = "block";
+        }
+        
+        
+        function closeForm() {
+          document.getElementById("myForm").style.display = "none";
+        }
+
+        function closeForms() {
+          document.getElementById("myForm1").style.display = "none";
+        }
+        </script>
+    
+
+
+   
+    
+</body>
+</html>

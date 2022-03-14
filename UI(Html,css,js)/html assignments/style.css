@@ -1,0 +1,61 @@
+body{
+    background-color: yellow;
+}
+
+.row1{
+    background-color: red;
+}
+.row2{
+    background-color: green;
+}
+
+.row2 p{
+    font-size: 30px;
+}
+
+.image img{
+    border: 2px solid black;
+    width: 20px;
+    height: 20px;
+}
+
+.image span{
+    color: black;
+}
+.image2 span{
+    color: black;
+}
+
+.image2 img{
+   
+    width: 20px;
+    height: 20px;
+}
+
+table{
+    background-color: aliceblue;
+}
+
+
+.top{
+    background-color: aquamarine;
+}
+
+.td1{
+    padding: 50px;
+}
+
+
+
+.left{
+
+    background-color: lightgrey;
+}
+
+.right{
+    background-color: darkgray;
+}
+
+.topright{
+    width: 50%;
+}
