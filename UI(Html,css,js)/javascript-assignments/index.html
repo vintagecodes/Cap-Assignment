@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Bill</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="details">
+            <form action="">
+                Name :<input type="text" name="name" id="name" required><br>
+                Email :<input type="email" name="email" id="email" required>
+                <h2>Toppings:</h2>
+                <div class="toppings">
+                    Extra Cheese <input type="checkbox" name="cheese" id="cheese">
+                    Pepperoni <input type="checkbox" name="pepperoni" id="peproni">
+                    olives <input type="checkbox" name="olives" id="olives">
+                    Bacon <input type="checkbox" name="bacon" id="bacon">
+                    Pepper <input type="checkbox" name="pepper" id="pepper">
+                    Tomatoes <input type="checkbox" name="tomatoes" id="tomatoes">
+                    Mushrooms <input type="checkbox" name="mushrooms" id="mushrooms">
+                </div>
+
+                <div class="gets">
+                    <p>How do you want to get your pizza!</p>
+                    <div class="some">
+                        Delivery <input type="radio" name="delivery" id="delivery">
+                        Pickup <input type="radio" name="pickup" id="pickup">
+                    </div>
+                   
+                </div>
+
+                <div class="tip">
+                    <p>Tip?</p>
+                    <select name="tip" id="tip">
+                        <option value="15%">15%</option>
+                        <option value="15%">20%</option>
+                        <option value="15%">25%</option>
+                    </select>
+                </div>
+                
+                <hr>
+
+                <div class="add">
+                        <p>Address:</p>
+                        <textarea name="add" id="add" cols="50" rows="8"></textarea>
+                </div>
+                <input type="button" value="Submit" onclick="myFunction()">
+                <input type="reset" value="Reset">
+                <a href="#popup1"><input type="button" value="Show Summary" id="summary" onclick="myFunction()" disabled ></a>
+
+            </form>
+        </div>
+
+    </div>
+
+    <div id="popup1" class="overlay">
+        <div class="popup">
+            <h2>Here i am</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+                The Name of the Customer is : <p id="name1"></p>
+                <br>
+                Your Email Id  : <p id="email1"></p>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

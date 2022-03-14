@@ -1,0 +1,140 @@
+body{
+    margin: 0;
+    top: auto;
+}
+
+.par1{
+    background: blue;
+    line-height: 2;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    padding: 15px;
+}
+
+.par2{
+    background: #6495ed;
+    padding: 15px;
+}
+
+.par3{
+    background: lightskyblue;
+    padding: 10px;
+}
+
+.par4{
+    background: #6495ed;
+    padding: 15px;
+}
+
+.par5{
+    background: lightskyblue;
+    padding: 15px;
+}
+
+h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h2{
+    text-decoration: line-through;
+
+}
+
+h3{
+    text-decoration: underline;
+}
+
+.container3{
+    width: 50%;
+    height: 50%;
+    background: lightcyan;
+}
+
+#p1{
+    text-transform: uppercase;
+}
+
+.link{
+    background: lightblue;
+}
+
+.link a{
+   color: red;
+   font-weight: 700;
+}
+
+.tables{
+    margin-top: 15px;
+}
+
+table{
+    border: 1px solid green;
+}
+
+table th{
+    background: green;
+    color: white;
+}
+
+.support{
+    margin-top: 15px;
+    width: 40%;
+    height: 15%;
+    border: 1px solid black;
+    background: lightcyan;
+}
+
+.outlines{
+    background: white;
+    margin: 20px 0 0 50px;
+    width: 75%;
+    border: 2px solid green;
+    border-style: dotted;
+    border-width: 5px;
+    
+}
+
+.ss{
+    border: 2px solid brown;
+}
+
+.border{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.s1{
+    width: 50%;
+    border: solid black;
+    border-width: 8px;
+    background: lightblue;
+}
+
+.s2{
+    margin: 10px 0 0 0;
+    width: 50%;
+    border: solid black;
+    border-width: 5px;
+    background: lightblue;
+    justify-content: space-between;
+}
+
+.s3{
+    margin: 10px 0 0 0;
+    width: 50%;
+    border: solid black;
+    border-width: 2px;
+    background: lightblue;
+}
+
+.s4{
+    padding: 15px;
+    margin: 10px 0 0 0;
+    width: 50%;
+    border-width: 2px;
+    background: lightblue;
+}
